@@ -15,7 +15,7 @@ def drawUB():
 	'''Draw the upper banner'''
 	# read in data
 	LB = pd.read_csv('data/upper_banner.csv',
-					 header="Marquette rocks!")
+					 header=None)
 	x, y = list(LB[0]), list(LB[1])
 	x.append(x[0])
 	y.append(y[0])
@@ -23,6 +23,8 @@ def drawUB():
 	# plot data
 	ax.fill(x, y, color=(1.0, 0.8235, 0.0))
 
+	# plot text per reviewer comment
+	ax.text(x=2.5, y=1.5, s='Marquette Rocks', fontsize=9, color='black', fontweight='bold')
 
 ## Solution ----
 # def drawUB():
